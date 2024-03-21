@@ -13,15 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -43,23 +34,78 @@ body {
   font-weight: 500;
 }
 
+#weather-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#weather-location {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: xx-large;
+  margin-top: 10px;
+}
+
+.location-lables {
+  font-size: large;
+  margin: 5px;
+}
+
 .weather-box-large {
-  background-color: #f9f9f9;
-  color: #1a1a1a;
-  height: 300px;
-  width: 300px;
+  background-color: #494949;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 45px;
+  padding: 20px;
+  margin-top: 3%;
+}
+
+.current-weather-items {
+  width: 100%;
+  text-align: center;
+}
+
+#day-date {
+  font-size: 25px;
+}
+
+#temperature {
+  font-size: 48px;
+}
+
+#temperature-feel {
+  font-size: 20px;
 }
 
 #forcasted-weather {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 3%;
 }
 
 .weather-box-small {
-  gap: 5px;
-  background-color: #747bff;
-  height: 200px;
-  width: 200px;
+  background-color: #494949;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  padding: 3px;
+}
+
+.future-weather-items {
+  width: 100%;
+  text-align: center;
 }
 
 h1 {
@@ -78,23 +124,14 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#loading-component {
+  text-align: center;
+  font-size: 50px;
+  padding: 25%;
 }

@@ -12,7 +12,7 @@ function App() {
   const [weatherLocation, setWeatherLocation] = useState({
     lat: "13.21321",
     lon: "132998.21321",
-    // city: "Chennai",
+    city: "Chennai",
   });
 
   //get geolocation only once on load
@@ -107,25 +107,44 @@ function App() {
             value={searchLocationInput}
             onChange={(e) => setSearchLocationInput(e.target.value)}
             placeholder="Enter location"
+            autoComplete="off"
           />
           <button type="submit">Search</button>
         </form>
       </div>
-      {loading ? (
-        <div>
-          <h2 id="weather-location">
-            {weatherLocation.city ? <>City: {weatherLocation.city}</> : <></>}
-            Latitude: {weatherLocation.lat}
-            Longitude: {weatherLocation.lon}
-          </h2>
+      {!loading ? (
+        <div id="weather-info">
+          <div id="weather-location">
+            <div id="city" className="location-lables">
+              City: {weatherLocation.name ? weatherLocation.name : "---"}
+            </div>
+            <div id="latitude" className="location-lables">
+              Latitude: {weatherLocation.lat}
+            </div>
+            <div id="longitude" className="location-lables">
+              Longitude: {weatherLocation.lon}
+            </div>
+          </div>
           <div id="current-weather" className="weather-box-large">
-            <div id="day-date">{currentWeather?.time}</div>
-            {currentWeather?.time}
+            <div id="day-date" className="current-weather-items">
+              {currentWeather?.time}
+            </div>
+            <div id="temperature" className="current-weather-items">
+              {currentWeather?.values.temperature}&deg;C
+            </div>
+            <div id="temperature-feel" className="current-weather-items">
+              Feels like {currentWeather?.values.temperatureApparent}&deg;C
+            </div>
           </div>
           <div id="forcasted-weather">
             {forcastWeather?.map((day, index) => (
               <div key={index} className="weather-box-small">
-                {day.values.temperatureAvg}
+                <div id="day-date-future" className="future-weather-items">
+                  {day.time}
+                </div>
+                <div id="temperature-future" className="future-weather-items">
+                  {day.values.temperatureAvg}&deg;C
+                </div>
               </div>
             ))}
           </div>

@@ -44,10 +44,12 @@ export const fetchFutureWeather = async (location) => {
     );
     const responseData = response.data;
     //convert the dateTime string to required format
-    responseData.timelines.daily.map((item) => ({
+    responseData.timelines.daily = responseData.timelines.daily.map((item) => ({
       ...item,
       time: formatDate(item.time),
     }));
+
+    console.log(responseData.timelines.daily);
     return responseData;
   } catch (error) {
     console.error("Error fetching future weather forecast:", error);
