@@ -1,0 +1,33 @@
+{
+  "data": {
+    "time": "2024-03-21T01:50:00Z",
+    "values": {
+      "cloudBase": 0.61,
+      "cloudCeiling": null,
+      "cloudCover": 22,
+      "dewPoint": 23.31,
+      "freezingRainIntensity": 0,
+      "humidity": 75,
+      "precipitationProbability": 0,
+      "pressureSurfaceLevel": 1012.63,
+      "rainIntensity": 0,
+      "sleetIntensity": 0,
+      "snowIntensity": 0,
+      "temperature": 26.69,
+      "temperatureApparent": 28.69,
+      "uvHealthConcern": 0,
+      "uvIndex": 0,
+      "visibility": 16,
+      "weatherCode": 1100,
+      "windDirection": 14.5,
+      "windGust": 3.88,
+      "windSpeed": 2.81
+    }
+  },
+  "location": {
+    "lat": 13.083693504333496,
+    "lon": 80.27018737792969,
+    "name": "Chennai, Chennai District, Tamil Nadu, 600001, India",
+    "type": "city"
+  }
+}
