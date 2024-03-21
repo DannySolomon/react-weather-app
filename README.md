@@ -1,8 +1,29 @@
-# React + Vite
+Assignment Overview:
+This project is a simple weather application developed using React. Its purpose is to provide users with real-time and forecasted weather data. The application integrates the Tomorrow.io API to fetch weather information.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+How to Run the Application:
+To run the application locally:
+Clone the repository to your local machine.
+Navigate to the project directory.
+Install dependencies using npm install.
+Start the development server with npm run dev.
 
-Currently, two official plugins are available:
+Dependencies:
+The application relies on Axios for fetching data from the tomorrow.io API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation Instructions:
+Ensure you have Node.js installed on your machine.
+Clone the repository: git clone <repository-url>.
+Navigate to the project directory: cd <project-directory>.
+Install dependencies: npm install.
+
+Configuration:
+No configuration is required. But please replace the 'API_KEY' with your key.
+
+Testing:
+Tested the API using Postman
+
+Contact Information:
+
+Name: Danny Solomon N
+Email: ndanny366@gmail.com
